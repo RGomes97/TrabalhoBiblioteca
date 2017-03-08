@@ -16,17 +16,17 @@ a {
 
 .titulo-centralizado {
 	text-align: center;
-	margin: 30px 0;
+	margin: 18px 0;
 	color: #0070C0;
 	width: 100%;
 }
 .logo {
-	width: 100px;
+	width: 110px;
 	float: right;
 
 }
 .header-title > h1 > img {
-	margin: 0;
+	margin-top: -15px;
 }
 
 * {
@@ -58,7 +58,6 @@ a {
 .header-help li {
 	display: inline-block;
 	color: white;
-
 	margin: 3px 10px;
 
 }
