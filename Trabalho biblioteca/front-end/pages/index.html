@@ -19,36 +19,66 @@
 		<div class="header-menu"><i class="fa fa-user-secret fa-lg"></i> Autoridades</div>
 		<div class="header-menu"><i class="fa fa-shopping-basket fa-lg"></i> Minha seleção</div>
 		<div class="header-menu"><i class="fa fa-tasks fa-lg"></i> Serviços</div>
+		<!-- modal -->
 		<div class="header-menu"><i class="fa fa-key fa-lg"></i> Login</div>
 	</div>
-	<ul class="header-help">
-		<li>
-			<a href="" title="">Alto Contraste</a>
-		</li>
-		<li>
-			<a href="" title="">Acessibilidade</a>
-		</li>
-		<li>
-			<a href="" title="">Ajuda</a>
-		</li>
-	</ul>
-	<div class="header-submenu">
-		
+	<div>
+		<ul class="header-help">
+			<li>
+				<a href="" title="">Alto Contraste</a>
+			</li>
+			|
+			<li> <!-- modal -->
+				<a href="" title="">Acessibilidade</a>
+			</li>
+			|
+			<li> <!-- modal -->
+				<a href="" title="">Ajuda</a>
+			</li>
+		</ul>
 	</div>
-	<div class="header-search">Busca rápida</div>
-	<div class="header-search">Busca combinada</div>
-	<select>
-		<option>Todos os campos</option>
-		<option>Título</option>
-		<option>Autor</option>
-		<option>Assunto</option>
-		<option>Editora</option>
-		<option>ISBN / ISSN</option>
-		<option>Série</option>
-		<option>Desc. compl.</option>
-	</select>
-	<input type="text" placeholder="Digite aqui a sua busca">
-	<button class="btn-default">Buscar</button>
-	<button class="btn-default">Limpar</button>
+	<!-- tab search -->
+	<div class=" nav-tab-custom">
+		<ul id="tabs" class="header-search nav nav-tabs">
+			<li><a href="#buscaRapida" type="nav-tab">Busca rápida</a></li>
+			<li><a href="#buscaCombinada" type="nav-tab">Busca combinada</a></li>
+			<li class="pull-right">
+				<select>
+					<option>Qualquer Biblioteca</option>
+					<option>Biblioteca2</option>
+					<option>Crizólito Antunes de Souza</option>
+				</select>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<!-- content busca rapida -->
+			<div class="active tab-pane" id="buscaRapida">
+				<select>
+					<option>Todos os campos</option>
+					<option>Título</option>
+					<option>Autor</option>
+					<option>Assunto</option>
+					<option>Editora</option>
+					<option>ISBN / ISSN</option>
+					<option>Série</option>
+					<option>Desc. compl.</option>
+				</select>
+				<input type="text" placeholder="Digite aqui a sua busca">
+				<button class="btn-default">Buscar</button>
+				<button class="btn-default">Limpar</button>
+				<input type="checkbox">
+				Registros com conteudo digital
+			</div>
+			<!-- content busca Combinada -->
+			<div class="tab-pane" id="buscaCombinada">
+
+			</div>
+		</div>
+	</div>
+
+	<!-- AQUI VAI O CONTENT -->
+	<div class="header-search"></div>
+	
+	
 </body>
 </html>

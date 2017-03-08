@@ -1,16 +1,33 @@
+/*estilos gerais*/
 a {
 	text-decoration: none;
+	font-family: arial sans-serif;
+}
+a:hover {
+	color: #00FFFF;
+}
+.pull-right {
+	float: right;
 }
 .container {
 	margin: 0 auto;
 	max-width: 980px;
 }
-.header-wrapper{
-	margin: 0 auto;
-	display: block;
+.logo {
+	width: 110px;
+	float: right;
+}
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	vertical-align:baseline;
+	font-family: 'Abel', sans-serif;
 }
 
-.header-title {
+/*header*/
+.header-wrapper{
+	margin: 0 auto;
 	display: block;
 }
 
@@ -20,22 +37,10 @@ a {
 	color: #0070C0;
 	width: 100%;
 }
-.logo {
-	width: 110px;
-	float: right;
-
-}
 .header-title > h1 > img {
 	margin-top: -15px;
 }
 
-* {
-	margin:0;
-	padding:0;
-	list-style:none;
-	vertical-align:baseline;
-	font-family: 'Abel', sans-serif;
-}
 
 .header-menu{
 	width: 16.33%;
@@ -51,13 +56,31 @@ a {
 .header-help {
 	width: 100%;
 	background: #0070C0;
-	margin: 5px 0;
+	margin: 5px 0 0 0;
 	float: right;
-
 }
 .header-help li {
 	display: inline-block;
 	color: white;
 	margin: 3px 10px;
+}
 
+.header-help li a {
+	color: #efefef;
+}
+
+.header-search {
+	width: 100%;
+	background: #efefef;
+	margin: 5px 0;
+	float: right;
+
+}
+.header-search li {
+	display: inline-block;
+	margin: 3px 10px;
+}
+
+.tab-pane {
+	margin: 5px 0;
 }
