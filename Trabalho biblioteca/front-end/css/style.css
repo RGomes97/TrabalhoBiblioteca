@@ -1,0 +1,24 @@
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	vertical-align:baseline;
+}
+
+.header-menu{
+	width: 15%;
+	margin: 0.1%;
+	background-color: #0070C0;
+	height: 30px;
+	color: #FFFFFF;
+	display: inline-block;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.header-wrapper{
+	margin: 0 auto;
+	display: block;
+	max-width: 90%;
+	background-color: black;
+}
