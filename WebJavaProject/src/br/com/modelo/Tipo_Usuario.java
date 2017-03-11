@@ -17,6 +17,10 @@ public class Tipo_Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-		
+	
+	@Override
+	public String toString() {
+		return "Id: "+this.id+" Tipo: "+this.nome;
+	}
 	
 }

@@ -14,10 +14,13 @@ create table usuarios (
 	nome varchar(255) not null,
 	email varchar(255) not null,
 	tipo_usuario_id int not null,
-	senha varchar(255) not null	
+	senha varchar(255) not null,
+	constraint fk_tipo_usuario foreign key tipo_usuario_id references (id) on (tipo_usuario)
 );
 
-create table tipo_produtos (
+
+
+create table tipo_produto (
 	id int auto_increment primary key,
 	nome varchar(255) not null
 );

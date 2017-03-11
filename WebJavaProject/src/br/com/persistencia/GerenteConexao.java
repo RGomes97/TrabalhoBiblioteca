@@ -17,7 +17,6 @@ public class GerenteConexao {
 	try{
 		Class.forName("org.gjt.mm.mysql.Driver");
 		conexao = DriverManager.getConnection(url, usuario, senha);
-		System.out.println("Conexão efetuada viado com sucesso!!!");
 	}catch(ClassNotFoundException cnfe){
 		System.out.println("Erro ao carregar o driver");
 		cnfe.printStackTrace();
