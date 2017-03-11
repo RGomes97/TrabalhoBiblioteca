@@ -1,7 +1,7 @@
 package br.com.teste;
 
 import br.com.modelo.Empregado;
-import br.com.modelo.EmpregadoDAO;
+import br.com.persistencia.EmpregadoDAO;
 
 public class TestaEmpregadoDAO {
 	public static void main(String args[]){

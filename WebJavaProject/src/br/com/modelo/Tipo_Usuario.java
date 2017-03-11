@@ -1,9 +1,10 @@
 package br.com.modelo;
 
-public class Empregado {
+public class Tipo_Usuario {
 	private int id;
 	private String nome;
-	private int age;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -16,13 +17,6 @@ public class Empregado {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	public String toString(){
-		return "Código = "+getId()+ " | Nome = "+getNome()+ " | Idade = "+getAge();
-	}
+		
+	
 }

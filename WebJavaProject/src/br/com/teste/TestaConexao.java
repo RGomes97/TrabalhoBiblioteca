@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class TestaConexao {
 	public static void main (String args[]) throws SQLException{
 		Connection conexao = null;
-		String url = "jdbc:mysql://localhost:3306/crudLp3";
+		String url = "jdbc:mysql://localhost:3306/trabalhoBiblioteca";
 		String usuario = "root"; 
 		String senha = "1982cleber";
 		try{

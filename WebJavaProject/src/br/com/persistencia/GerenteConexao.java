@@ -11,7 +11,7 @@ public class GerenteConexao {
 	//metodo estático gerador de conexões 
 	public static Connection getConexao(){
 	Connection conexao = null;
-	String url = "jdbc:mysql://localhost:3306/crudLp3";
+	String url = "jdbc:mysql://localhost:3306/trabalhoBiblioteca";
 	String usuario = "root";
 	String senha = "1982cleber";
 	try{
