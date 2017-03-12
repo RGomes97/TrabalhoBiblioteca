@@ -15,8 +15,23 @@ create table usuarios (
 	email varchar(255) not null,
 	tipo_usuario_id int not null,
 	senha varchar(255) not null,
-	constraint fk_tipo_usuario foreign key tipo_usuario_id references (id) on (tipo_usuario)
+	constraint fk_tipo_usuario foreign key (tipo_usuario_id) references tipo_usuario(id)
 );
+
+insert into usuarios (nome,email,tipo_usuario_id,senha) values
+	("Cleber Fernandes","cleber@cleber",1,"cleber"),
+	("Amanda Nuds","nuds@nuds",1,"amanda"),
+	("Fabio Asker","fabio@fabio",1,"fabio"),
+	("Rubens Agostinho","ruby@ruby",1,"rubens"),
+	("William Tiririca","tiri@tiri",1,"tiririca"),
+	("Fernando Alecrim","ale@ale",1,"alecrim");
+	
+
+	
+	
+	
+//Não executar o codigo abaixo na criação do banco, não está pronto
+
 
 
 
@@ -56,6 +71,6 @@ create table pedidos (
 create table item_pedidos (
 	id int auto_increment primary key,	
 );
-create table pedidos (
+create table multas (
 	id int auto_increment primary key,	
 );

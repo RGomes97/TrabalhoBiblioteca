@@ -10,8 +10,10 @@ public class TestaUsuarioDAO {
 		// lista tipos de usuarios
 		//UsuarioDAO.listaTipos();
 		
+		
 		// recebe um tipo de usuario conforme o id passado
 		Tipo_Usuario tipo = UsuarioDAO.escolheTipoUsuario(2);
+		
 		
 		// testa inserção de usuário
 		/*Usuario usuario = new Usuario();
@@ -20,6 +22,7 @@ public class TestaUsuarioDAO {
 		usuario.setTipo(tipo);
 		usuario.setSenha("tiririca");
 		UsuarioDAO.grava(usuario);*/
+		
 		
 		// testa alteração
 		/*Usuario usuario = new Usuario();
@@ -30,11 +33,14 @@ public class TestaUsuarioDAO {
 		usuario.setSenha("cleber");
 		UsuarioDAO.altera(usuario);*/
 		
+		
 		// testa exclusão	
 		//usuarioDAO.exclui(1);
 		
+		
 		// lista usuarios
 		//UsuarioDAO.listaUsuarios();
+		
 		
 		// le um único usuario
 		UsuarioDAO.le(3);
