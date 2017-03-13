@@ -3,7 +3,7 @@ Trabalho realizado para disciplinas de LP3 e AMS
 
 # Nova estrutura
 
-JavaResorces src/br/com - Back-end
+JavaResorces src/br/com/biblioteca - Back-end
 
 WebContent - Front-end
 
@@ -16,8 +16,9 @@ na raiz do WebJavaProject.
 
 2.5- O documento acima ainda não está pronto, execute somente a criação da tabela de tipo_usuario e usuarios.
 
-3- Mude a senha na classe da pasta persistencia 
+3- Mude a senha na classe GerenteConexao da pasta persistencia 
 
 4- Importe o projeto no eclipse.
 
 5- Certificar-se que o driver do mysql foi incluido nas libraries
+

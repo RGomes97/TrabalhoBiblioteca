@@ -1,4 +1,4 @@
-package br.com.persistencia;
+package br.com.impacta.dao;
 
 import java.sql.Connection; 
 import java.sql.DriverManager; 

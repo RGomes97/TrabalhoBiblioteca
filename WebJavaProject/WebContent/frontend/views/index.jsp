@@ -2,17 +2,27 @@
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<!-- taglibs são da biblioteca jstl, onde achamos tags que representam foreach, if, etc... -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<!-- para usar taglib precisamos importar a biblioteca no WEB-INF/lib -->
 <head>
 	<title>Sophia biblioteca</title>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+	<!-- não importa em que pagina esteja, a jstl sempre vai montar a url certa -->
+	<!--  pode ser assim, 1º declarar a tag c:url e 2º usar em um href -->
+	<c:url value="/frontend/css/style.css" var="urlStyleCss" /> 
+	<link rel="stylesheet" type="text/css" href="${ urlStyleCss }" />
+	<!-- ou assim direto, sem criar uma variavel -->
+	<link rel="stylesheet" type="text/css" href="<c:url value="/frontend/css/font-awesome.min.css" /> " />
+	
 	<link href="https://fonts.googleapis.com/css?family=Abel|Roboto" rel="stylesheet">
 </head>
 <body class="container">
 	<div class="header-title">
 		<h1 class="titulo-centralizado">Faculdade Impacta de Tecnologia
-		<img class="logo" src="../img/sophia.png" alt=""></h1>
+		<c:url value="/frontend/img/sophia.png" var="urlImgSophia" /> 
+		<img class="logo" src="${urlImgSophia }" alt=""></h1>
 	</div>
 
 	<div class="header-wrapper">
@@ -71,11 +81,12 @@
 				<input class="checkboxtext" type="checkbox">
 				Registros com conteudo digital
 			</div>
-			<!-- content busca Combinada -->
+			
 			<div class="tab-pane" id="buscaCombinada">
 
 			</div>
-
+			
+			<!-- content busca Combinada -->
 			<div class="tab-pane" id="buscaCombinada">
 				<ul>
 					<li>

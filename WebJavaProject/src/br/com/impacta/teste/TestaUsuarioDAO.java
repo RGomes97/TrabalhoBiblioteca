@@ -1,8 +1,10 @@
-package br.com.teste;
+package br.com.impacta.teste;
 
-import br.com.modelo.Tipo_Usuario;
-import br.com.modelo.Usuario;
-import br.com.persistencia.UsuarioDAO;
+import java.util.List;
+
+import br.com.impacta.dao.UsuarioDAO;
+import br.com.impacta.modelo.Tipo_Usuario;
+import br.com.impacta.modelo.Usuario;
 
 public class TestaUsuarioDAO {
 	public static void main(String args[]){
@@ -12,7 +14,7 @@ public class TestaUsuarioDAO {
 		
 		
 		// recebe um tipo de usuario conforme o id passado
-		Tipo_Usuario tipo = UsuarioDAO.escolheTipoUsuario(2);
+		// Tipo_Usuario tipo = UsuarioDAO.escolheTipoUsuario(2);
 		
 		
 		// testa inserção de usuário
@@ -39,10 +41,9 @@ public class TestaUsuarioDAO {
 		
 		
 		// lista usuarios
-		//UsuarioDAO.listaUsuarios();
-		
+		UsuarioDAO.listaUsuarios();
 		
 		// le um único usuario
-		UsuarioDAO.le(3);
+		//UsuarioDAO.le(3);
 	}
 }

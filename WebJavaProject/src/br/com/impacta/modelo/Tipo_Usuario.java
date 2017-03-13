@@ -1,4 +1,4 @@
-package br.com.modelo;
+package br.com.impacta.modelo;
 
 public class Tipo_Usuario {
 	private int id;
