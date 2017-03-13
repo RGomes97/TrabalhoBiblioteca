@@ -22,7 +22,8 @@
 	</div>
 
 	<div class="header-wrapper">
-		<div class="header-menu"><i class="fa fa-home fa-lg"></i> Home</div>
+		<div class="header-menu"><i class="fa fa-home fa-lg"></i> 
+		<a href="#buscaRapida" type="nav-tab">Busca rápida</a></div>
 		<div class="header-menu"><i class="fa fa-search fa-lg"></i> Pesquisa</div>
 		<div class="header-menu"><i class="fa fa-user-secret fa-lg"></i> Autoridades</div>
 		<div class="header-menu"><i class="fa fa-shopping-basket fa-lg"></i> Minha seleção</div>

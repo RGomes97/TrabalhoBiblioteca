@@ -4,34 +4,33 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import br.com.impacta.modelo.Permissao;
 import br.com.impacta.modelo.Tipo_Usuario;
 import br.com.impacta.modelo.Usuario;
 
 public class UsuarioDAO {
-	private static PreparedStatement pst = null;
-	private static ResultSet rs = null;
 	
 	public static int grava(Usuario usuario) {
 		Connection con = GerenteConexao.getConexao();
-		
+		PreparedStatement pst = null;
 		int ret = 0;
 		try {
-			String sql = "INSERT INTO usuarios(nome, email, tipo_usuario_id, senha) VALUES(?,?,?,?)";
+			String sql = "INSERT INTO usuarios(nome, email, tipo_usuario_id, senha, ra, permissao_id) VALUES(?,?,?,?)";
 			pst = con.prepareStatement(sql);
 			pst.setString(1, usuario.getNome());
 			pst.setString(2, usuario.getEmail());
 			pst.setInt(3, usuario.getTipo().getId());
 			pst.setString(4, usuario.getSenha());
+			pst.setString(5, usuario.getRa());
+			pst.setInt(3, usuario.getPermissao().getId());
 			ret = pst.executeUpdate();
 			System.out.println(usuario);
-			System.out.println("Dados inseridos com sucesso!!!");
 		} catch (SQLException sqle) {
 			System.out.println("Não foi possível inserir os dados!!");
 			System.out.println(sqle);
@@ -41,18 +40,20 @@ public class UsuarioDAO {
 	
 	public static int altera(Usuario usuario) {
 		Connection con = GerenteConexao.getConexao();
+		PreparedStatement pst = null;
 		int ret = 0;
 		try {
 			String sql = "UPDATE usuarios SET nome = ?, email = ?, "
-				+ "tipo_usuario_id = ?, senha = ? WHERE id = ?";
+				+ "tipo_usuario_id = ?, ra = ?, permissao_id = ? WHERE id = ?";
 			pst = con.prepareStatement(sql);
 			pst.setString(1, usuario.getNome());
 			pst.setString(2, usuario.getEmail());
 			pst.setInt(3, usuario.getTipo().getId());
-			pst.setString(4, usuario.getSenha());
-			pst.setInt(5, usuario.getId());
+			pst.setString(4, usuario.getRa());
+			pst.setInt(5, usuario.getPermissao().getId());
+			pst.setInt(6, usuario.getId());
 			ret = pst.executeUpdate();
-			System.out.println("Dados atualizados com sucesso!!!");
+			
 		} catch (SQLException sqle) {
 			System.out.println("Não foi possível atualizar os dados!!");
 			System.out.println(sqle);
@@ -63,6 +64,7 @@ public class UsuarioDAO {
 	
 	public static int exclui(int id) {
 		Connection con = GerenteConexao.getConexao();
+		PreparedStatement pst = null;
 		int ret = 0; 
 		try {
 			String sql = "DELETE FROM usuarios WHERE id = ?";
@@ -80,9 +82,9 @@ public class UsuarioDAO {
 	
 	public static Usuario le(int id) {
 		Connection con = GerenteConexao.getConexao();
-		
+		PreparedStatement pst = null;
+		ResultSet rs = null;
 		Usuario usuario = null;
-		Tipo_Usuario tipo = null;
 		try {
 			String sql = "SELECT * FROM usuarios WHERE id = ?";
 			pst = con.prepareStatement(sql);
@@ -90,13 +92,15 @@ public class UsuarioDAO {
 			rs = pst.executeQuery();
 			if (rs.next()){
 				
-				tipo = escolheTipoUsuario(rs.getInt("tipo_usuario_id"));
-				
+				Tipo_Usuario tipo = escolheTipoUsuario(rs.getInt("tipo_usuario_id"));
+				Permissao permissao = permissaoUsuario(rs.getInt("permissao_id"));
 				usuario = new Usuario();
 				usuario.setId(rs.getInt("id"));
 				usuario.setNome(rs.getString("nome"));
 				usuario.setEmail(rs.getString("email"));
 				usuario.setTipo(tipo);
+				usuario.setPermissao(permissao);
+				usuario.setRa(rs.getString("ra"));
 				System.out.println(usuario);
 			}
 			System.out.println("Dados obtidos com sucesso!!!");
@@ -109,9 +113,33 @@ public class UsuarioDAO {
 	}
 	
 	
+	private static Permissao permissaoUsuario(int id) {
+		Connection con = GerenteConexao.getConexao();
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Permissao permissao = null;
+		try {
+			String sql = "SELECT * FROM permissoes where id = ?";
+			pst = con.prepareStatement(sql);
+			pst.setInt(1, id);
+			rs = pst.executeQuery();
+			if (rs.next()){
+					
+				permissao = new Permissao(rs.getInt("id"),rs.getString("nome"));
+	
+			}
+			System.out.println("Tipo "+permissao+" escolhido com sucesso!!!");
+		} catch (SQLException sqle) {
+			System.out.println("Não foi possível escolher o tipo!!");
+			sqle.printStackTrace();
+		}
+		return permissao;
+	}
+
 	public static List<Usuario> listaUsuarios() {
 		Connection con = GerenteConexao.getConexao();
-
+		PreparedStatement pst = null;
+		ResultSet rs = null;
 		List <Usuario> usuarios = new ArrayList();
 		Usuario usuario = null;
 		Tipo_Usuario tipo = null;
@@ -121,13 +149,15 @@ public class UsuarioDAO {
 			rs = pst.executeQuery();
 			if (rs.next()){
 				do {
-					
+					Permissao permissao = permissaoUsuario(rs.getInt("permissao_id"));
 					tipo = escolheTipoUsuario(rs.getInt("tipo_usuario_id"));	
 					usuario = new Usuario();
 					usuario.setId(rs.getInt("id"));
 					usuario.setNome(rs.getString("nome"));
 					usuario.setEmail(rs.getString("email"));
 					usuario.setTipo(tipo);
+					usuario.setPermissao(permissao);
+					usuario.setRa(rs.getString("ra"));
 					usuarios.add(usuario);
 					System.out.println(usuario);
 				} while(rs.next());
@@ -141,10 +171,36 @@ public class UsuarioDAO {
 		return usuarios;
 	}
 	
+	public static List<Permissao> listaPermissoes() {
+		Connection con = GerenteConexao.getConexao();
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		List <Permissao> permissoes = new ArrayList();
+		try {
+			String sql = "SELECT * FROM permissoes";
+			pst = con.prepareStatement(sql);
+			rs = pst.executeQuery();
+			if (rs.next()){
+				do {
+					
+					Permissao permissao = new Permissao(
+							rs.getInt("id"),rs.getString("nome"));
+
+					permissoes.add(permissao);
+				} while(rs.next());	
+			}
+		} catch (SQLException sqle) {
+			System.out.println("Não foi possível listar os tipos de usuarios!!");
+			sqle.printStackTrace();
+		}
+		return permissoes;
+	}
+	
 
 	public static List<Tipo_Usuario> listaTipos() {
 		Connection con = GerenteConexao.getConexao();
-
+		PreparedStatement pst = null;
+		ResultSet rs = null;
 		List <Tipo_Usuario> tipos = new ArrayList();
 		Tipo_Usuario tipo = null;
 		try {
@@ -170,7 +226,8 @@ public class UsuarioDAO {
 	
 	public static Tipo_Usuario escolheTipoUsuario(int id) {
 		Connection con = GerenteConexao.getConexao();
-
+		PreparedStatement pst = null;
+		ResultSet rs = null;
 		Tipo_Usuario tipo = null;
 		try {
 			String sql = "SELECT * FROM tipo_usuario where id = ?";
@@ -193,7 +250,8 @@ public class UsuarioDAO {
 
 	public Usuario login(String email, String senha) {
 		Connection con = GerenteConexao.getConexao();
-
+		PreparedStatement pst = null;
+		ResultSet rs = null;
 		Map <String,Usuario> usuarios = new HashMap();
 		
 		try {

@@ -6,19 +6,39 @@ public class Usuario {
 	private String email;
 	private Tipo_Usuario tipo;
 	private String senha;
+	private String ra;
+	private Permissao permissao;
 	
 	public Usuario(){
 		
 	}
 	
 	public Usuario(int id, String nome, String email, Tipo_Usuario tipo,
-			String senha) {
+			String senha,String ra,Permissao permissao) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.tipo = tipo;
 		this.senha = senha;
+		this.ra = ra;
+		this.permissao = permissao;
 	}
+	public String getRa() {
+		return ra;
+	}
+
+	public void setRa(String ra) {
+		this.ra = ra;
+	}
+
+	public Permissao getPermissao() {
+		return permissao;
+	}
+
+	public void setPermissao(Permissao permissao) {
+		this.permissao = permissao;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -52,7 +72,8 @@ public class Usuario {
 	
 	@Override
 	public String toString() {
-		return "nome: "+this.nome+"\nemail: "+this.email+"\ntipo: "+this.tipo.getNome();
+		return "nome: "+this.nome+"\nemail: "+this.email+"\ntipo: "+
+	this.tipo.getNome()+"\nRa: "+this.ra+"\nPermissao: "+this.permissao.getNome();
 	}
 	
 	

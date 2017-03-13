@@ -17,11 +17,11 @@ public class Login implements Tarefa {
 		Usuario usuario = new UsuarioDAO().login(email, senha);
 		if(usuario==null){
 			
-			return "<html><body>Usuario invalido</body></html>";
+			return "/frontend/views/admin.jsp";
 		} else {
 			HttpSession session = req.getSession();
 			session.setAttribute("logadoComo", usuario);
-			return "<html><body>"+usuario.getEmail()+"</body></html>";
+			return "/frontend/views/admin.jsp";
 		}
 	}
 }

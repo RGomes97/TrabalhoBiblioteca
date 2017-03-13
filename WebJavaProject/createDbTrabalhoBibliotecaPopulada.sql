@@ -6,25 +6,32 @@ create table tipo_usuario (
 	id int auto_increment primary key,
 	nome varchar(255) not null
 );
-
 insert into tipo_usuario (nome) values ('Aluno'),('Funcionario'),('Professor');
+
+create table permissoes (
+	id int auto_increment primary key,
+	permissao varchar(255) not null
+);
 
 create table usuarios (
 	id int auto_increment primary key,
+	ra varchar(10) not null,
 	nome varchar(255) not null,
 	email varchar(255) not null,
 	tipo_usuario_id int not null,
 	senha varchar(255) not null,
-	constraint fk_tipo_usuario foreign key (tipo_usuario_id) references tipo_usuario(id)
+	permissao_id int not null,
+	constraint fk_tipo_usuario foreign key (tipo_usuario_id) references tipo_usuario(id),
+	constraint fk_permissao foreign key (permissao_id) references permissoes(id)
 );
 
-insert into usuarios (nome,email,tipo_usuario_id,senha) values
-	("Cleber Fernandes","cleber@cleber",1,"cleber"),
-	("Amanda Nuds","nuds@nuds",1,"amanda"),
-	("Fabio Asker","fabio@fabio",1,"fabio"),
-	("Rubens Agostinho","ruby@ruby",1,"rubens"),
-	("William Tiririca","tiri@tiri",1,"tiririca"),
-	("Fernando Alecrim","ale@ale",1,"alecrim");
+insert into usuarios (nome,email,tipo_usuario_id,senha,ra,permissao_id) values
+	("Cleber Fernandes","cleber@cleber",1,"cleber","1600763",2),
+	("Amanda Nuds","nuds@nuds",1,"amanda","1600763",2),
+	("Fabio Asker","fabio@fabio",1,"fabio","1600763",1),
+	("Rubens Agostinho","ruby@ruby",1,"rubens","1600763",1),
+	("William Tiririca","tiri@tiri",1,"tiririca","1600763",0),
+	("Fernando Alecrim","ale@ale",1,"alecrim","1600763",0);
 	
 
 	

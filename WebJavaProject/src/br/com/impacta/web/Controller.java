@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+// com essa classe servlet não precisamos instanciar outras
+// ela recebe uma tarefa e instancia uma ação
 @WebServlet(urlPatterns = "/executa")
 public class Controller extends HttpServlet{
 	@Override
@@ -21,7 +23,7 @@ public class Controller extends HttpServlet{
 		}
 		
 		try {
-			String nomeClasse = "br.com.web."+ tarefa;
+			String nomeClasse = "br.com.impacta.web."+ tarefa;
 			Class<?> tipo = Class.forName(nomeClasse);
 			Tarefa instancia = (Tarefa) tipo.newInstance();
 			// para onde redirecionar

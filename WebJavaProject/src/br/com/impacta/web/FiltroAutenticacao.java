@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import br.com.impacta.modelo.Usuario;
 
 @WebFilter("/*")
-public class FiltroAuditoria implements Filter {
+public class FiltroAutenticacao implements Filter {
 
 	@Override
 	public void destroy() {
