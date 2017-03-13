@@ -10,8 +10,10 @@ insert into tipo_usuario (nome) values ('Aluno'),('Funcionario'),('Professor');
 
 create table permissoes (
 	id int auto_increment primary key,
-	permissao varchar(255) not null
+	nome varchar(255) not null
 );
+
+insert into permissoes (nome) values ('Usuario'),('Gestor'),('Admin');
 
 create table usuarios (
 	id int auto_increment primary key,
@@ -27,11 +29,11 @@ create table usuarios (
 
 insert into usuarios (nome,email,tipo_usuario_id,senha,ra,permissao_id) values
 	("Cleber Fernandes","cleber@cleber",1,"cleber","1600763",2),
-	("Amanda Nuds","nuds@nuds",1,"amanda","1600763",2),
-	("Fabio Asker","fabio@fabio",1,"fabio","1600763",1),
-	("Rubens Agostinho","ruby@ruby",1,"rubens","1600763",1),
-	("William Tiririca","tiri@tiri",1,"tiririca","1600763",0),
-	("Fernando Alecrim","ale@ale",1,"alecrim","1600763",0);
+	("Amanda Nuds","nuds@nuds",1,"amanda","1600762",2),
+	("Fabio Asker","fabio@fabio",1,"fabio","1600761",1),
+	("Rubens Agostinho","ruby@ruby",1,"rubens","1600764",1),
+	("William Tiririca","tiri@tiri",1,"tiririca","1600765",3),
+	("Fernando Alecrim","ale@ale",1,"alecrim","1600766",3);
 	
 
 	
