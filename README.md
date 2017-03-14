@@ -3,7 +3,7 @@ Trabalho realizado para disciplinas de LP3 e AMS
 
 # Nova estrutura
 
-JavaResorces src/br/com/biblioteca - Back-end
+JavaResorces src/br/com/impacta - Back-end
 
 WebContent - Front-end
 

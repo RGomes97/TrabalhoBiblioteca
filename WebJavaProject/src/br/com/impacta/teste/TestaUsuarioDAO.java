@@ -41,7 +41,11 @@ public class TestaUsuarioDAO {
 		
 		
 		// lista usuarios
-		UsuarioDAO.listaUsuarios();
+		List<Usuario> usuarios = UsuarioDAO.listaUsuarios();
+		for (Usuario usuario : usuarios) {
+			System.out.println(usuario);
+		}
+		
 		
 		// le um único usuario
 		//UsuarioDAO.le(3);

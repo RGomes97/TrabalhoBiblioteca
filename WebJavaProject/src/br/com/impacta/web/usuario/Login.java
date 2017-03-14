@@ -1,9 +1,10 @@
-package br.com.impacta.web;
+package br.com.impacta.web.usuario;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.com.impacta.controller.Tarefa;
 import br.com.impacta.dao.UsuarioDAO;
 import br.com.impacta.modelo.Usuario;
 

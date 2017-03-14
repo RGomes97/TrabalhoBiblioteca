@@ -1,4 +1,4 @@
-package br.com.impacta.web;
+package br.com.impacta.controller;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -23,7 +23,7 @@ public class Controller extends HttpServlet{
 		}
 		
 		try {
-			String nomeClasse = "br.com.impacta.web."+ tarefa;
+			String nomeClasse = "br.com.impacta.web.usuario."+ tarefa;
 			Class<?> tipo = Class.forName(nomeClasse);
 			Tarefa instancia = (Tarefa) tipo.newInstance();
 			// para onde redirecionar

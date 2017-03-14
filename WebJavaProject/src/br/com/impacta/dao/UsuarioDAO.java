@@ -141,8 +141,7 @@ public class UsuarioDAO {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 		List <Usuario> usuarios = new ArrayList();
-		Usuario usuario = null;
-		Tipo_Usuario tipo = null;
+
 		try {
 			String sql = "SELECT * FROM usuarios";
 			pst = con.prepareStatement(sql);
@@ -150,8 +149,8 @@ public class UsuarioDAO {
 			if (rs.next()){
 				do {
 					Permissao permissao = permissaoUsuario(rs.getInt("permissao_id"));
-					tipo = escolheTipoUsuario(rs.getInt("tipo_usuario_id"));	
-					usuario = new Usuario();
+					Tipo_Usuario tipo = escolheTipoUsuario(rs.getInt("tipo_usuario_id"));	
+					Usuario usuario = new Usuario();
 					usuario.setId(rs.getInt("id"));
 					usuario.setNome(rs.getString("nome"));
 					usuario.setEmail(rs.getString("email"));
@@ -167,6 +166,9 @@ public class UsuarioDAO {
 			System.out.println("Não foi possível listar os dados!!");
 			System.out.println(sqle);
 			sqle.printStackTrace();
+		}
+		if(usuarios.isEmpty()){
+			System.out.println("Passei aqui");
 		}
 		return usuarios;
 	}
