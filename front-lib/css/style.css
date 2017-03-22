@@ -1,0 +1,59 @@
+body{
+    background-color: #ddd;
+}
+
+.logo_text{
+    display: block;
+    text-align: center;
+}
+
+ul{
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+li{
+   list-style-type: none;
+   display: inline-flex;
+   align-items: center; 
+   justify-content: center;
+   width: 16.3%;
+   height: 40px;
+   background-color: green;
+   vertical-align: middle;
+   cursor: pointer;
+}
+
+li:hover{
+    color: #FFFFFF
+}
+
+
+.content_box {
+    background: #000;
+    width: 100%;
+    height: 60vh;
+}
+
+.busca{
+    height: 57px;
+}
+
+.busca h4 {
+    margin-left: 5px;  
+    background-color: #c6c6c6;
+    padding: 10px 30px;
+    display: inline-block;
+} 
+
+.sub-busca{
+    margin-left: 5px;
+    background-color: #c6c6c6;
+    display:block;
+    clear:both;
+    width: 100%;
+    padding: 10px 10px;
+}
