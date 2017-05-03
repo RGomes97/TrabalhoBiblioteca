@@ -10,6 +10,7 @@
         <script src="js/bootstrap.js"></script>
     </head>
     <body>
+        <header>
             <div class="navbar navbar-default without-border" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
@@ -27,7 +28,7 @@
                         <li><a href="#" id="trigger">PESQUISA</a></li>
                         <li><a href="#">MINHA SELEÇÃO</a></li>
                         <li><a href="#">SERVIÇOS</a></li>
-                        <li><a href="#">LOGIN</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal">LOGIN</a></li>
                     </ul>
                     </div>
                 </div>
@@ -47,12 +48,28 @@
                     </span>
                 </div>
             </div>
-
-
-    <script>
-        $('#trigger').click(() => {
-            $('#teste').slideToggle()
-        })
-    </script>
+            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="loginmodal-container">
+                        <h1>Logar</h1><br>
+                    <form>
+                        <input type="text" name="user" placeholder="Usuário">
+                        <input type="password" name="pass" placeholder="Senha">
+                        <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                    </form>
+                        
+                    <div class="login-help">
+                        <a href="#">Cadastrar</a> - <a href="#">Esqueci minha senha</a>
+                    </div>
+                    </div>
+                </div>
+		  </div>
+        </header>
+        
+        <script>
+            $('#trigger').click(() => {
+                $('#teste').slideToggle()
+            })
+        </script>
     </body>
 </html>
