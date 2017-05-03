@@ -1,353 +1,58 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biblioteca Digital</title>
-    <link rel="stylesheet" href="css/foundation.css" />    
-    <link rel="stylesheet" href="css/prodigy-responsive.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/revolution.css" media="screen"/>
-    <link rel="stylesheet" href="css/revolution-responsive.css" media="screen"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
-
-    <link rel="shortcut icon" href="img/favicon.ico" />
-    
-</head>
-
-<body>
-    <div id="box-wrapper">
-
-        <!-- Header start here -->
-        <header id="header1" class="header">
-            <div class="row">
-                <div class="large-4 tp-12 columns">
-                    <div id="logo">
-                        <a href="#"><img src="img/logo.png" alt="" class="retina" /></a>
-                    </div>    
-                </div>
-
-                <div class="large-8 tp-12 columns">
-                    <div id="navigation">
-                        <!-- expanding search  -->
-                        <div id="form-search" class="form-search">
-                            <form>
-                                <input class="search-input" placeholder="Insira o que deseja buscar.." type="text" value="" name="search" id="search">
-                                <input class="search-submit" type="submit" value="">
-                                <span class="search-icon"><i class="icon-search"></i></span>
-                            </form>
-                        </div>
-
-                        <nav class="nav-menu">
-                            <a class="toggleMenu" href="#"><i class="icon-menu"></i></a>
-
-                            <ul class="nav width_nav">
-                                <li class="active"><a href="#">Home</a>
-                                </li>
-                                <li><a href="#">Autoridades</a></li>  
-                                <li><a href="#">Minha seleção</a></li>
-                                <li><a href="#">Serviços</a></li>
-                                <li><a href="#">Login</a></li>               
-                            </ul>
-                        </nav>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </head>
+    <body>
+            <div class="navbar navbar-default without-border" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Biblioteca Impacta</a>
+                    </div>
+                    <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">HOME</a></li>
+                        <li><a href="#" id="trigger">PESQUISA</a></li>
+                        <li><a href="#">MINHA SELEÇÃO</a></li>
+                        <li><a href="#">SERVIÇOS</a></li>
+                        <li><a href="#">LOGIN</a></li>
+                    </ul>
                     </div>
                 </div>
-            </div>    
-        </header>
-        <!-- Header end here -->
-        
-        <!-- Slideshow start here -->
-        <section id="slide-wrapper">
-            <div class="banner">    
-
-                <ul>      
-                    <!-- slide 1 -->
-                    <li data-transition="fade">
-                        <img src="img/slideshow/bg_slide1.jpg" alt="">
-                        <div class="caption slide_overlay fade" data-x="-50%" data-y="0" data-speed="1000" data-start="100" data-easing="easeOutExpo"></div>
-                        <div class="caption general_caption lfb ltb tp-rr1"  data-x="180" data-y="173" data-speed="900" data-endspeed="900" data-start="250" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <h1 class="uppercase text-center">Biblioteca Digital - livros online<br/> Biblioteca online</h1>
-                        </div>
-                        <div class="caption general_caption lfl ltl tp-rr2"  data-x="353" data-y="323" data-speed="900" data-endspeed="900" data-start="650" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <a href="#" class="button small green round">Cadastre-se</a>
-                        </div>
-                        <div class="caption general_caption lfr ltr tp-rr3"  data-x="500" data-y="323" data-speed="900" data-endspeed="900" data-start="650" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <a href="#" class="button small white-sld round">Logue-se <i class="icon-user"></i></a>
-                        </div>
-                        <div class="caption general_caption lfb ltb tp-rr4"  data-x="302" data-y="385" data-speed="900" data-endspeed="900" data-start="750" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <p class="text-center">Tanem segawon balung ringgit lawas Nedha ageng pedhang mbekta<br/>piring kalung nginum naleni.</p>
-                        </div>
-                    </li>
-
-                    <!-- slide 2 -->
-                    <li data-transition="fade">
-                        <img src="img/slideshow/bg_slide2.jpg" alt="">
-                        <div class="caption slide_overlay fade" data-x="-50%" data-y="0" data-speed="1000" data-start="100" data-easing="easeOutExpo"></div>
-                       <div class="caption general_caption lfb ltb tp-rr1"  data-x="180" data-y="173" data-speed="900" data-endspeed="900" data-start="250" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <h1 class="uppercase text-center">Biblioteca Digital - livros online<br/> Biblioteca online</h1>
-                        </div>
-                        <div class="caption general_caption lfl ltl tp-rr2"  data-x="353" data-y="323" data-speed="900" data-endspeed="900" data-start="650" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <a href="#" class="button small green round">Cadastre-se</a>
-                        </div>
-                        <div class="caption general_caption lfr ltr tp-rr3"  data-x="500" data-y="323" data-speed="900" data-endspeed="900" data-start="650" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <a href="#" class="button small white-sld round">Logue-se <i class="icon-user"></i></a>
-                        </div>
-                        <div class="caption general_caption lfb ltb tp-rr4"  data-x="302" data-y="385" data-speed="900" data-endspeed="900" data-start="750" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <p class="text-center">Tanem segawon balung ringgit lawas Nedha ageng pedhang mbekta<br/>piring kalung nginum naleni.</p>
-                        </div>
-                    </li>
-                    <!-- slide 3 -->
-                    <li data-transition="fade">
-                        <img src="img/slideshow/bg_slide3.jpg" alt="">
-                        <div class="caption slide_overlay fade" data-x="-50%" data-y="0" data-speed="1000" data-start="100" data-easing="easeOutExpo"></div>
-                        <div class="caption general_caption lfb ltb tp-rr1"  data-x="180" data-y="173" data-speed="900" data-endspeed="900" data-start="250" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <h1 class="uppercase text-center">Biblioteca Digital - livros online<br/> Biblioteca online</h1>
-                        </div>
-                        <div class="caption general_caption lfl ltl tp-rr2"  data-x="353" data-y="323" data-speed="900" data-endspeed="900" data-start="650" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <a href="#" class="button small green round">Cadastre-se</a>
-                        </div>
-                        <div class="caption general_caption lfr ltr tp-rr3"  data-x="500" data-y="323" data-speed="900" data-endspeed="900" data-start="650" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <a href="#" class="button small white-sld round">Logue-se <i class="icon-user"></i></a>
-                        </div>
-                        <div class="caption general_caption lfb ltb tp-rr4"  data-x="302" data-y="385" data-speed="900" data-endspeed="900" data-start="750" data-end="8500" data-easing="easeOutExpo" data-endeasing="easeInExpo">
-                            <p class="text-center">Tanem segawon balung ringgit lawas Nedha ageng pedhang mbekta<br/>piring kalung nginum naleni.</p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="tp-bannertimer tp-bottom"></div>
-            </div>    
-        </section>
-        <!-- Slideshow end here -->
-        
-        <!-- Content wrapper and sticky menu trigger here  -->
-        <div id="content-wrapper" class="browser-fix">
-            <!-- Content start here -->
-            <section class="content">
-                <div class="row triggerAnimation animated" data-animate="fadeInDown">
-                    <div class="large-4 medium-6 columns">
-                        <div class="circle-border small icon-left">
-                            <i class="icon-fblike"></i>
-                        </div>
-                        <div class="content-position1">
-                            <h4>Boa escolha</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniam </p>
-                        </div>
-                    </div>
-
-                    <div class="large-4 medium-6 columns">
-                        <div class="circle-border small icon-left">
-                            <i class="icon-design"></i>
-                        </div>
-                        <div class="content-position1">
-                            <h4>Livros para estudos</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniam </p>
-                        </div>
-                    </div>
-
-                    <div class="large-4 medium-6 columns">
-                        <div class="circle-border small icon-left">
-                            <i class="icon-iphone"></i>
-                        </div>
-                        <div class="content-position1">
-                            <h4>Também digital</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniam </p>
-                        </div>
-                    </div>
-
-                    <div class="large-4 medium-6 columns">
-                        <div class="circle-border small icon-left">
-                            <i class="icon-layers"></i>
-                        </div>
-                        <div class="content-position1">
-                            <h4>Múltiplos empréstimos</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniam </p>
-                        </div>
-                    </div>
-
-                    <div class="large-4 medium-6 columns">
-                        <div class="circle-border small icon-left">
-                            <i class="icon-book"></i>
-                        </div>
-                        <div class="content-position1">
-                            <h4>Livros variados</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniam </p>
-                        </div>
-                    </div>
-
-                    <div class="large-4 medium-6 columns">
-                        <div class="circle-border small icon-left">
-                            <i class="icon-dropbox"></i>
-                        </div>
-                        <div class="content-position1">
-                            <h4>Variedades</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniam </p>
-                        </div>
-                    </div>
-
-                    <div class="large-12 columns text-center gap-top25">
-                        <a href="#" class="button medium round green">Encontre já seu livro favorito</a>    
-                    </div>
+            </div>  
+            <div id="teste" style="display:none">
+                <div class="input-group my-group center">
+                    <input type="text" class="form-control first-form-control search-form" placeholder="Insira os termos para sua busca">
+                    <select class="option-form" id="options" class="selectpicker form-control first-form-control"  title="Selecione um dos campos">
+                        <option value="">a</option>
+                        <option value="">b</option>
+                        <option value="">c</option>
+                        <option value="">d</option>
+                        <option value="">e</option>
+                    </select>
+                    <span class="input-group-btn btn-form">
+                        <button class="btn btn-default" type="submit"> Pesquisar </button>
+                    </span>
                 </div>
-            </section>
-            <!-- Content end here -->
+            </div>
 
-            <!-- Content start here -->
-            <section class="content">
-                <div class="row">
-                    <div class="large-9 medium-9 tp-12 columns triggerAnimation animated" data-animate="fadeInLeft">
-                        <h4 class="heading-line"><span>Últimos livros</span></h4>
-
-                        <div id="content-carousel" class="owl-carousel">
-                            <div class="item cs-style-1">
-                                <figure>
-                                    <div>
-                                        <img src="img/thumb/livro1.png" alt="" class="img-radius">
-                                    </div>
-                                    <figcaption>
-                                        lorem ipsum
-                                    </figcaption>
-                                </figure>
-                                <a href="#"><h5>Livro tal</h5></a>
-                                <p>Consectetur adipisicin elit sed do eiusmod tempor incididunt labore ... </p>
-                            </div>
-                            <div class="item cs-style-1">
-                                <figure>
-                                    <div>
-                                        <img src="img/thumb/livro1.png" alt="" class="img-radius">
-                                    </div>
-                                    <figcaption>
-                                        lorem ipsum
-                                    </figcaption>
-                                </figure>
-                                <a href="#"><h5>Livro tal</h5></a>
-                                <p>Consectetur adipisicin elit sed do eiusmod tempor incididunt labore ... </p>
-                            </div>
-                            <div class="item cs-style-1">
-                                <figure>
-                                    <div>
-                                        <img src="img/thumb/livro1.png" alt="" class="img-radius">
-                                    </div>
-                                    <figcaption>
-                                        lorem ipsum
-                                    </figcaption>
-                                </figure>
-                                <a href="#"><h5>Livro tal</h5></a>
-                                <p>Consectetur adipisicin elit sed do eiusmod tempor incididunt labore ... </p>
-                            </div>
-                            <div class="item cs-style-1">
-                                <figure>
-                                    <div>
-                                        <img src="img/thumb/livro1.png" alt="" class="img-radius">
-                                    </div>
-                                    <figcaption>
-                                        lorem ipsum
-                                    </figcaption>
-                                </figure>
-                                <a href="#"><h5>Livro tal</h5></a>
-                                <p>Consectetur adipisicin elit sed do eiusmod tempor incididunt labore ... </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="large-3 medium-3 tp-12 columns triggerAnimation animated" data-animate="fadeInRight">
-                        <h4 class="heading-line"><span>Cliente Satisfeito</span></h4>
-
-                        <div class="testi-container">
-                            <div class="testi-text">
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniamLorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniamLorem ipsum dolor sit amet consectetur adipisicin elit sed do eiusmod tempor incididunt ut labore dolore magna aliquaenim ad minim veniam</p>
-                                </blockquote>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="testi-image">
-                            <img src="img/sample/team7.jpg" alt="" />
-                        </div>
-                        <div class="testi-name">Loren Ipsum
-                            <br/>
-                            <span class="label round green">Lorem - Ipsum</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Content end here -->
-        </div>
-        <!-- Content wrapper and sticky menu trigger end here  -->
-
-    </div>
-    
-    <!-- ////////////////////////////////// -->
-    <!-- //      Javascript Files        // -->
-    <!-- ////////////////////////////////// -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/jquery.responsivetabs.js"></script>
-    <script src="js/jquery.fancybox.js"></script>
-    <script src="js/jquery.fancybox-media.js"></script>
-    <script src="js/jquery.donutchart.js"></script>    
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.accordion.js"></script>
-    <script src="js/jquery.retina.js"></script>
-    <script src="js/jquery.classie.js"></script>
-    <script src="js/jquery.uisearch.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/jquery.sscr.js"></script>
-    <script src="js/jquery.parallax-1.1.3.js"></script>
-
-    <!-- Javascript plugin here  -->
-    <script src="js/jquery.themepunch.plugins.min.js"></script>
-    <script src="js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/jquery.carousel.js"></script>
-
-    <!-- Javascript initialize here  -->
-    <script src="js/prodigy.js"></script>
 
     <script>
-
-    $(document).ready(function() {
-        // Initialization Handle
-        Prodigy.init();
-        Prodigy.contentCarouselHandle();
-
-        //Slideshow
-        $('.banner').revolution({
-            delay:9000,
-            startwidth:1000,
-            startheight:575,
-            hideThumbs:1,
-            navigationType:"none",                  // bullet, thumb, none
-            navigationArrows:"solo",                // nexttobullets, solo (old name verticalcentered), none
-            navigationStyle:"navbar",               // round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
-            navigationHAlign:"center",              // Vertical Align top,center,bottom
-            navigationVAlign:"bottom",              // Horizontal Align left,center,right
-            navigationHOffset:0,
-            navigationVOffset:0,
-            soloArrowLeftHalign:"left",
-            soloArrowLeftValign:"center",
-            soloArrowLeftHOffset:30,
-            soloArrowLeftVOffset:0,
-            soloArrowRightHalign:"right",
-            soloArrowRightValign:"center",
-            soloArrowRightHOffset:30,
-            soloArrowRightVOffset:0,
-            touchenabled:"on",                      // Enable Swipe Function : on/off
-            onHoverStop:"off",                      // Stop Banner Timet at Hover on Slide on/off
-            stopAtSlide:-1,                         // Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
-            stopAfterLoops:-1,                      // Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
-            hideCaptionAtLimit:0,                   // It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
-            hideAllCaptionAtLilmit:0,               // Hide all The Captions if Width of Browser is less then this value
-            hideSliderAtLimit:0,                    // Hide the whole slider, and stop also functions if Width of Browser is less than this value
-            shadow:0,                               //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows  (No Shadow in Fullwidth Version !)
-            fullWidth:"on"                          // Turns On or Off the Fullwidth Image Centering in FullWidth Modus
+        $('#trigger').click(() => {
+            $('#teste').slideToggle()
         })
-
-    });
-
-    $(document).foundation();
     </script>
-    
-</body>
+    </body>
 </html>
